@@ -28,6 +28,50 @@
 	<body aria-label=""></body>
 
 	<script>
+
+parseGitHubUrl = (url) => {
+			const urlObj = new window.URL(url);
+			const parts = urlObj.pathname.split(/\/|%2F/g).filter(Boolean);
+			const hasFileType = ["tree", "blob"].includes(parts[2]);
+			const hasBranchName = hasFileType && parts[3];
+
+			return {
+				owner: parts[0] || "conwnet",
+				repo: parts[1] || "github1s",
+				type: (hasFileType ? parts[2] : "tree").toLowerCase(),
+				branch: hasBranchName ? parts[3] : "HEAD",
+				path: "/" + (hasBranchName ? parts.slice(4).join("/") : ""),
+				search: urlObj.search || "",
+				hash: urlObj.hash || "",
+			};
+		};
+
+		const route = parseGitHubUrl(window.location.href);
+
+		window.product = {
+			productConfiguration: {
+				version: "1.53.2-dev",
+				nameShort: "GitHub1s",
+				nameLong: "GitHub1s",
+			},
+			homeIndicator: {
+				href: `https://github.com/${route.owner}/${route.repo}`,
+				icon: "github",
+				title: "Home",
+			},
+			folderUri: {
+				scheme: "github1s",
+				path: "/",
+				authority: `${route.owner}+${route.repo}+${route.branch}`,
+			},
+			windowIndicator: {
+				onDidChange: () => {},
+				label: `$(github) Github1s ${route.owner}/${route.repo}`,
+				tooltip: `$(github) Github1s ${route.owner}/${route.repo}` ,
+			},
+		};
+
+
 		const extElement = document.getElementById(
 			"vscode-workbench-builtin-extensions"
 		);

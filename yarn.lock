@@ -1470,10 +1470,10 @@ vscode-textmate@^5.2.0:
   resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-5.2.0.tgz#01f01760a391e8222fe4f33fbccbd1ad71aed74e"
   integrity sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==
 
-vscode-web@^1.53.0:
-  version "1.53.0"
-  resolved "https://registry.yarnpkg.com/vscode-web/-/vscode-web-1.53.0.tgz#2abcc3d59b0da4ea024f17545690b1407b9b636e"
-  integrity sha512-/4G/1QnXuPlTf0TKZlgcLxxBpixKRtsPvshohN8M9T2uTfZ6N9purf+LMfqtQrYlMkRVs0OP0FBqXnVSmrYenw==
+vscode-web@^1.53.2:
+  version "1.53.2"
+  resolved "https://registry.yarnpkg.com/vscode-web/-/vscode-web-1.53.2.tgz#153f6c275bbbef9df8096175188f7ddd0fc1e903"
+  integrity sha512-nh8hKUZtEosjcvMUr6vgB3HQ2toxTYO/uUWkL7J0xjkbpm2SfhU3cxtVbh5l3UnAq+Npnf7HuLOFEeA6rnMafw==
 
 which@^2.0.1:
   version "2.0.2"
