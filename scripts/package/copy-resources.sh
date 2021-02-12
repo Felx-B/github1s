@@ -9,12 +9,13 @@ function main() {
 	mkdir -p dist
 	if [ "${IS_BUILD-}" ];
 	then
-		cp resources/index.html dist/index.html
+		cp resources/index-new.html dist/index.html
 	else
-		cp resources/index-dev.html dist/index.html
+		cp resources/index-new.html dist/index.html
 	fi
 	cp resources/favicon.ico dist
 	cp resources/manifest.json dist
+	cp resources/product.json dist
 
 	echo "copy resources done!"
 }
